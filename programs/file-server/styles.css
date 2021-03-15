@@ -1,0 +1,16 @@
+body {
+  background-color: #eee;
+  color: #006;
+  font-family: verdana;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+img {
+  border: solid 2px white;
+  padding: 2px;
+  width: 300px;
+}

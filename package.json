@@ -1,0 +1,25 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js --exec babel-node -e js",
+    "watch": "nodemon ./index.js --exec babel-node -e js",
+    "tx": "npx babel-node",
+    "txw": "nodemon  --exec babel-node -e js",
+    "server": "nodemon ./server/index.js --exec babel-node -e js",
+    "serverx": "npx babel-node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Craig O. Curtis",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}

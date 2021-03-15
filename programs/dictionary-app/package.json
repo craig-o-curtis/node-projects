@@ -1,0 +1,43 @@
+{
+  "name": "dictionary-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src --exec babel-node -e js",
+    "postinstall": "npm run build",
+    "pretest": "npx cowsay \"let's test\"",
+    "test": "jest --verbose",
+    "dev:test": "jest --verbose --watchAll",
+    "dev:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
+    "build": "webpack --mode production",
+    "preserve-build": "npm run build",
+    "serve-build": "node ./dist/bundle.js"
+  },
+  "author": "Craig O. Curtis",
+  "license": "ISC",
+  "dependencies": {
+    "clear-logs": "^1.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-stage-0": "^7.8.3",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3",
+    "webpack": "^5.26.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/jest-setup.js"
+    ]
+  }
+}
